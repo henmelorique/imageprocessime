@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Portal de Processamento de Imagens</title> 
+</head> 
+<body> 
+
+	<div class="jumbotron rounded-0" style="background-color: #4a77b4">
+  		<div class="container" style="color: #fff">
+    		<h1 class="display-4">Processamento de Imagens</h1>
+    		<p>Plataforma gratuita para o processamento de imagens</p>
+  		</div>
+	</div>
+
+	<form method = "post" enctype="multipart/form-data"> 
+		{% csrf_token %} 
+		{{ form.as_p }} 
+		<button type="submit">Upload</button> 
+	</form> 
+
+	<p></p>
+	<p></p>
+	<img src="/media/images/ime.jpg" class="img-responsive" width="90" align="left">
+	<h3>Instituto Militar de Engenharia</h3>
+	<p>A plataforma foi desenvolvida no Instituto Militar de Engenharia. O projeto é de responsabilidade da Seção de Engenharia Cartográfica - SE/6.</p>
+
+
+</body> 
+</html> 
+
