@@ -20,9 +20,19 @@ from django.conf.urls.static import static
 from .views import *
 
 urlpatterns = [ 
-	path('plataforma', hotel_image_view, name = 'plataforma'), 
-	path('resultado', results, name = 'success'),
+	path('plataforma', home, name = 'plataforma'), 
+	path('mean', mean, name = 'success'),
+	path('mediana', mediana, name = 'success'),
+	path('realce', realce, name = 'success'),
+	path('bilateral', bilateral, name = 'success'),
+	path('laplaciano', laplaciano, name = 'success'),
+	path('media_output', media_output, name = 'success_mean'),
+	path('mediana_output', mediana_output, name = 'success_mediana'),
+	path('bilateral_output', bilateral_output, name = 'success_bilateral'),
+	path('realce_output', realce_output, name = 'success_realce'),
+	path('laplaciano_output', laplaciano_output, name = 'success_laplaciano'),
 ] 
+
 
 if settings.DEBUG: 
 		urlpatterns += static(settings.MEDIA_URL, 

@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+pit {
+  background-color: #fff;
+  width: 200px;
+  padding: 25px;
+  border: 1px solid navy;
+}
+</style>
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Portal de Processamento de Imagens</title> 
+</head> 
+<body> 
+
+	<div class="jumbotron rounded-0" style="background-color: #4a77b4">
+  		<div class="container" style="color: #fff">
+    		<h1 class="display-4">Mediana</h1>
+    		<p>Filtragem pela mediana com uma janela de 5 pixels</p>
+  		</div>
+	</div>
+
+	<center>
+	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Filtro de Mediana</h1>
+		<div align='justify'>
+		Um dos filtros mais simples e utilizados no processamento de imagens. É constituído por uma máscara (n x n) que é construída com todos os seus elementos iguais a 1 e, posteriormente, divide-se o resultado da operação por um fator de normalização. O objetivo deste filtro é fazer uma suavização da imagem; por isso é considerado um filtro "passa-baixa", eliminando as altas frequências.
+		</div>
+  	</div>
+	
+  	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Upload de Arquivo</h1>
+  	</div>
+
+	<form method = "post" enctype="multipart/form-data"> 
+		{% csrf_token %} 
+		{{ form.as_p }} 
+		<button type="submit">Upload</button> 
+	</form> 
+	</center>
+
+	</div>
+	<p></p>
+	<p></p>
+	<img src="/media/ime.jpg" class="img-responsive" width="90" align="left">
+	<h3>Instituto Militar de Engenharia</h3>
+	<p>A plataforma foi desenvolvida no Instituto Militar de Engenharia. O projeto é de responsabilidade da Seção de Engenharia Cartográfica - SE/6.</p>
+
+
+</body> 
+</html> 
+

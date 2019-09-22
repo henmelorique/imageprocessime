@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+pit {
+  background-color: #fff;
+  width: 200px;
+  padding: 25px;
+  border: 1px solid navy;
+}
+</style>
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Portal de Processamento de Imagens</title> 
+</head> 
+<body> 
+
+	<div class="jumbotron rounded-0" style="background-color: #4a77b4">
+  		<div class="container" style="color: #fff">
+    		<h1 class="display-4">Aguçamento</h1>
+    		<p>Filtragem por aplicação do Laplaciano</p>
+  		</div>
+	</div>
+
+	<center>
+	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Filtro de Aguçamento</h1>
+		<div align='justify'>
+		O filtro de aguçamento é responsável por destacar as transições de intensidade em uma imagem, tornando-a, assim, mais nítida. Uma de suas principais características é o fato de possuir em seu algoritmo a presença de derivadas, o que é algo único desse filtro. O Laplaciano é uma das ferramentas mais utilizadas para operações de aguçamento.
+		</div>
+	
+  	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Upload de Arquivo</h1>
+  	</div>
+
+	<form method = "post" enctype="multipart/form-data"> 
+		{% csrf_token %} 
+		{{ form.as_p }} 
+		<button type="submit">Upload</button> 
+	</form> 
+	</center>
+
+	</div>
+	<p></p>
+	<p></p>
+	<img src="/media/ime.jpg" class="img-responsive" width="90" align="left">
+	<h3>Instituto Militar de Engenharia</h3>
+	<p>A plataforma foi desenvolvida no Instituto Militar de Engenharia. O projeto é de responsabilidade da Seção de Engenharia Cartográfica - SE/6.</p>
+
+
+</body> 
+</html> 
+

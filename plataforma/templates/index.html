@@ -1,5 +1,13 @@
 <!DOCTYPE html> 
 <html lang="en"> 
+<style>
+pit {
+  background-color: #fff;
+  width: 200px;
+  padding: 25px;
+  border: 1px solid navy;
+}
+</style>
 <head> 
 	<meta charset="UTF-8"> 
 	<title>Portal de Processamento de Imagens</title> 
@@ -12,16 +20,46 @@
     		<p>Plataforma gratuita para o processamento de imagens</p>
   		</div>
 	</div>
+	
+	<center>
+  	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Sobre</h1>
+		<p></p>
+		<div align='justify'>
+		A plataforma Processamento de Imagens faz parte de um dos Projetos de Fim de Curso desenvolvidos na Seção de Engenharia Cartográfica (SE/6) do Instituto Militar de Engenharia no ano de 2019. Os autores são Henrique Silva Melo e William Luna Batista, sob orientação do Coronel José Wilson Cavalcante Parente Júnior.
+		<p></p>
+		O projeto faz parte do portifólio que busca desenvolver ferramentas de processamento de imagens empregando a linguagem de programação Python, com propósitos principalmente acadêmicos. Uma das premissas do projeto foi que ele tivesse código aberto, de modo a poder ser editado mesmo depois da graduação de seus autores originais, permitindo melhorias constantes no sistema.
+		</div>
+  	</div>
+	</center>
+	
+	<center>
+  	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Ferramentas</h1>
+  	</div>
+	</center>
 
-	<form method = "post" enctype="multipart/form-data"> 
-		{% csrf_token %} 
-		{{ form.as_p }} 
-		<button type="submit">Upload</button> 
-	</form> 
+	<center>
+	<h1></h1>
+	<a href="/mean" class="btn btn-newcolor btn-sm">Média</a>
 
+	<h1></h1>
+	<a href="/mediana" class="btn btn-newcolor btn-sm">Mediana</a>
+
+	<h1></h1>
+	<a href="/mediana" class="btn btn-newcolor btn-sm">Filtro Bilateral</a>
+
+	<h1></h1>
+	<a href="/realce" class="btn btn-newcolor btn-sm">Realce</a>
+
+	<h1></h1>
+	<a href="/laplaciano" class="btn btn-newcolor btn-sm">Aguçamento</a>
+	</center>
+
+	</div>
 	<p></p>
 	<p></p>
-	<img src="/media/images/ime.jpg" class="img-responsive" width="90" align="left">
+	<img src="/media/ime.jpg" class="img-responsive" width="90" align="left">
 	<h3>Instituto Militar de Engenharia</h3>
 	<p>A plataforma foi desenvolvida no Instituto Militar de Engenharia. O projeto é de responsabilidade da Seção de Engenharia Cartográfica - SE/6.</p>
 

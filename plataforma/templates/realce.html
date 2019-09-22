@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+pit {
+  background-color: #fff;
+  width: 200px;
+  padding: 25px;
+  border: 1px solid navy;
+}
+</style>
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Portal de Processamento de Imagens</title> 
+</head> 
+<body> 
+
+	<div class="jumbotron rounded-0" style="background-color: #4a77b4">
+  		<div class="container" style="color: #fff">
+    		<h1 class="display-4">Realce</h1>
+    		<p>Realce por equalização de histograma</p>
+  		</div>
+	</div>
+
+	<center>
+	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Realce de Imagens</h1>
+		<div align='justify'>
+		A equalização de histograma é uma técnica que procura redistribuir os valores dos níveis de cinza em uma imagem, tendo como finalidade obter um histograma uniforme. A partir de uma função, aumenta-se o contraste geral na imagem espalhando a distribuição de níveis de cinza em seus respectivos pixels.
+		</div>
+
+  	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
+    		<h1 class="display-4" border="15px">Upload de Arquivo</h1>
+  	</div>
+
+	<form method = "post" enctype="multipart/form-data"> 
+		{% csrf_token %} 
+		{{ form.as_p }} 
+		<button type="submit">Upload</button> 
+	</form> 
+	</center>
+
+	</div>
+	<p></p>
+	<p></p>
+	<img src="/media/ime.jpg" class="img-responsive" width="90" align="left">
+	<h3>Instituto Militar de Engenharia</h3>
+	<p>A plataforma foi desenvolvida no Instituto Militar de Engenharia. O projeto é de responsabilidade da Seção de Engenharia Cartográfica - SE/6.</p>
+
+
+</body> 
+</html> 
+
