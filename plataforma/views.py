@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/usr/lib/python3.6/site-packages')
 from django.http import HttpResponse 
 from django.shortcuts import render, redirect 
 from .forms import *
@@ -5,6 +7,7 @@ import cv2
 import numpy as np
 import os
 from matplotlib import pyplot as plt
+
 
 # Create your views here. 
 def home(request): 
