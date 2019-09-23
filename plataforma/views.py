@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/usr/lib/python3.6/site-packages')
 from django.http import HttpResponse 
 from django.shortcuts import render, redirect 
 from .forms import *
