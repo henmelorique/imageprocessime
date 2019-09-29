@@ -25,12 +25,12 @@ urlpatterns = [
 	path('mediana', mediana, name = 'success'),
 	path('realce', realce, name = 'success'),
 	path('bilateral', bilateral, name = 'success'),
-	path('laplaciano', laplaciano, name = 'success'),
+	path('agucamento', laplaciano, name = 'success'),
 	path('media_output', media_output, name = 'success_mean'),
 	path('mediana_output', mediana_output, name = 'success_mediana'),
 	path('bilateral_output', bilateral_output, name = 'success_bilateral'),
 	path('realce_output', realce_output, name = 'success_realce'),
-	path('laplaciano_output', laplaciano_output, name = 'success_laplaciano'),
+	path('agucamento_output', laplaciano_output, name = 'success_laplaciano'),
 ] 
 
 

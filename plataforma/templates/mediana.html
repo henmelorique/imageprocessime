@@ -25,13 +25,17 @@ pit {
 	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
     		<h1 class="display-4" border="15px">Filtro de Mediana</h1>
 		<div align='justify'>
-		Um dos filtros mais simples e utilizados no processamento de imagens. É constituído por uma máscara (n x n) que é construída com todos os seus elementos iguais a 1 e, posteriormente, divide-se o resultado da operação por um fator de normalização. O objetivo deste filtro é fazer uma suavização da imagem; por isso é considerado um filtro "passa-baixa", eliminando as altas frequências.
+		Filtro não-linear que tem por objetivo remover ruídos em imagens preservando ao bordas e detalhes da imagem. No processamento de imagens utilizando esta ferramenta, o nível de cinza do pixel central da janela é substituído pela mediana dos pixels situados em sua vizinhança. Imagens que contenham ruídos do tipo sal e pimenta são as que apresentam melhores resultados utilizando a mediana, enquanto que para ruídos do tipo gaussiano é apenas satisfatório se comparado com o filtro de média.
 		</div>
   	</div>
 	
   	<div class="container" style="color: #000000; margin-bottom:1px; margin-top:1px;">
     		<h1 class="display-4" border="15px">Upload de Arquivo</h1>
   	</div>
+	<center>
+	Escolha a imagem a ser processada:
+	</center>
+	<p></p>
 
 	<form method = "post" enctype="multipart/form-data"> 
 		{% csrf_token %} 

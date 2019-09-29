@@ -6,6 +6,6 @@ class HotelForm(forms.ModelForm):
 
 	class Meta: 
 		model = Hotel 
-		fields = ['hotel_Main_Img'] 
+		fields = ['arquivo'] 
 
 

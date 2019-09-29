@@ -76,7 +76,7 @@ def media_output(request):
 		n = Hotel.objects.count()
 		# getting all the objects of hotel. 
 		Hotels = Hotel.objects.all()[n-1:]
-		a = Hotels[0].hotel_Main_Img.url
+		a = Hotels[0].arquivo.url
 		b = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+ a
 		image = cv2.imread(b)
 
@@ -89,7 +89,7 @@ def mediana_output(request):
 		n = Hotel.objects.count()
 		# getting all the objects of hotel. 
 		Hotels = Hotel.objects.all()[n-1:]
-		a = Hotels[0].hotel_Main_Img.url
+		a = Hotels[0].arquivo.url
 		b = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+ a
 		image = cv2.imread(b)
 
@@ -102,7 +102,7 @@ def bilateral_output(request):
 		n = Hotel.objects.count()
 		# getting all the objects of hotel. 
 		Hotels = Hotel.objects.all()[n-1:]
-		a = Hotels[0].hotel_Main_Img.url
+		a = Hotels[0].arquivo.url
 		b = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+ a
 		image = cv2.imread(b)
 
@@ -116,7 +116,7 @@ def realce_output(request):
 		n = Hotel.objects.count()
 		# getting all the objects of hotel. 
 		Hotels = Hotel.objects.all()[n-1:]
-		a = Hotels[0].hotel_Main_Img.url
+		a = Hotels[0].arquivo.url
 		b = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+ a
 		image = cv2.imread(b)
 
@@ -131,7 +131,7 @@ def laplaciano_output(request):
 		n = Hotel.objects.count()
 		# getting all the objects of hotel. 
 		Hotels = Hotel.objects.all()[n-1:]
-		a = Hotels[0].hotel_Main_Img.url
+		a = Hotels[0].arquivo.url
 		b = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+ a
 		image = cv2.imread(b)
 	
