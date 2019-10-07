@@ -57,7 +57,7 @@ def realce(request):
 			return redirect('success_realce') 
 	else: 
 		form = HotelForm() 
-	return render(request, 'realce.html', {'form' : form}) 
+	return render(request, 'histograma.html', {'form' : form}) 
 
 def laplaciano(request): 
 
@@ -124,7 +124,7 @@ def realce_output(request):
 		img_to_yuv[:,:,0] = cv2.equalizeHist(img_to_yuv[:,:,0])
 		equ = cv2.cvtColor(img_to_yuv, cv2.COLOR_YUV2BGR)
 		c = cv2.imwrite('/home/henrique/plataforma/media/images/realce.jpg', equ)
-		return render(request, 'realce_output.html')
+		return render(request, 'histograma_output.html')
 
 def laplaciano_output(request): 
 	if request.method == 'GET': 
