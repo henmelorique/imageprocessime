@@ -6,6 +6,7 @@ import numpy as np
 import os
 from matplotlib import pyplot as plt
 
+
 # Create your views here. 
 def home(request): 
 	return render(request, 'index.html') 
